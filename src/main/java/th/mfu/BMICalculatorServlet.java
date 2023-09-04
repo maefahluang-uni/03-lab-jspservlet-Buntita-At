@@ -35,13 +35,13 @@ public class BMICalculatorServlet extends HttpServlet{
         request.getRequestDispatcher("/bmi_result.jsp").forward(request, response);
     }
 
-    // Calculate BMI method
+    // Calculate BMI
     private double calculateBMI(double weight, double height) {
         // BMI formula: BMI = weight(kg) / (height(m) * height(m))
         return weight / (height * height);
     }
 
-    // Determine body type method (a simple example)
+    // Determine body type method 
     private String determineBodyType(double bmi) {
         if (bmi < 18.5) {
             return "underweight";
